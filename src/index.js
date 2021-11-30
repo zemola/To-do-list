@@ -1,14 +1,45 @@
 import _ from "lodash";
-import "./style.css";
+import "./style.css"; 
 
-function component() {
-  const element = document.createElement("div");
+let data = [
+  {
+    id: 1,
+    description: "string",
+    complete: false,
+  },
+  {
+    id: 2,
+    description: "string",
+    complete: false,
+  },
+  {
+    id: 3,
+    description: "string",
+    complete: false,
+  },
+  {
+    id: 4,
+    description: "string",
+    complete: false,
+  },
+];
 
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(["Hello", "webpack"], " ");
-  element.classList.add("hello");
+const mainHandler = () => {
+ data.forEach((list) => {
+    const ListElement = document.createElement('li');
+    ListElement.classList.add('todo');
+    ListElement.innerHTML = `
+      <div class= "toggle">
+        <span class="material-icons-outlined">check_box_outline_blank</span> 
+      <div class = "check">
+        <span class="material-icons-outlined">check</span>
+        </div>
+        </div>
+        <div class "description">
+          <p>${data.description}</p>
+        </div>
+        <span class="material-icons-outlined">more_vert</span> `;
+  });
+};
 
-  return element;
-}
-
-document.body.appendChild(component());
+mainHandler();
