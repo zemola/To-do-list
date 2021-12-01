@@ -1,6 +1,5 @@
-import _ from "lodash";
 import "./style.css"; 
-
+const listContainer = document.querySelector("[data-lists]");
 let data = [
   {
     id: 1,
@@ -26,9 +25,9 @@ let data = [
 
 const mainHandler = () => {
  data.forEach((list) => {
-    const ListElement = document.createElement('li');
-    ListElement.classList.add('todo');
-    ListElement.innerHTML = `
+    const listElement = document.createElement('li');
+    listElement.classList.add('todo');
+    listElement.innerHTML = `
       <div class= "toggle">
         <span class="material-icons-outlined">check_box_outline_blank</span> 
       <div class = "check">
@@ -39,6 +38,7 @@ const mainHandler = () => {
           <p>${data.description}</p>
         </div>
         <span class="material-icons-outlined">more_vert</span> `;
+    listContainer.appendChild(listElement);
   });
 };
 
