@@ -3,22 +3,22 @@ const listContainer = document.querySelector("[data-lists]");
 let data = [
   {
     id: 1,
-    description: "string",
+    description: "Want to join meeting by 8 am",
     complete: false,
   },
   {
     id: 2,
-    description: "string",
+    description: "need to code with my patner",
     complete: false,
   },
   {
     id: 3,
-    description: "string",
+    description: " Want to read about React",
     complete: false,
   },
   {
     id: 4,
-    description: "string",
+    description: "Standup meeting with my team by 6pm",
     complete: false,
   },
 ];
