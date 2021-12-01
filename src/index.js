@@ -35,7 +35,7 @@ const mainHandler = () => {
         </div>
         </div>
         <div class "description">
-          <p>${data.description}</p>
+          <p>${list.description}</p>
         </div>
         <span class="material-icons-outlined">more_vert</span> `;
     listContainer.appendChild(listElement);
