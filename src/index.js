@@ -29,11 +29,10 @@ const mainHandler = () => {
     const listElement = document.createElement('li');
     listElement.classList.add('todo');
     listElement.innerHTML = `
-    <div class 'check'><input type= 'checkbox'></div>
-    <div class 'description'>
-          <p>${list.description}</p>
-        </div>
-        <div><i class='fa fa-ellipsis-v'></i></div>
+      <div class 'description'>
+     <input type= 'checkbox'> <label>${list.description}</label>
+      </div>
+      <div><i class='fa fa-ellipsis-v'></i></div>
          `;
     listContainer.appendChild(listElement);
   });

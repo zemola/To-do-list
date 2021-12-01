@@ -100,18 +100,11 @@ i {
   padding: 15px;
 }
 
-.check {
-  width: 10%;
-  padding: 15px;
-}
-
-.description {
-  width: 500px;
-  text-align: start;
-}
-
 .description p {
   color: #000;
+}
+.description input {
+  margin-left: 15px;
 }
 
 .clear-all {
