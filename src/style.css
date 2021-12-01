@@ -14,3 +14,52 @@ body {
     font-size: 14px;
     color: #1d1d1d;
 }
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.general-wrapper {
+  width: 500px;
+  max-height: 660px;
+  overflow-y: scroll;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+}
+
+.general-wrapper::-webkit-scrollbar {
+  width: 0;
+}
+
+.general-wrapper::-webkit-scrollbar-thumb {
+  background-color: #d3d3d3;
+}
+
+.title-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px;
+  padding: 16px;
+  border-bottom: 1px solid #d8d8d8;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #fff;
+}
+
+.title-header h1 {
+  font-size: 16px;
+}
+
+.title-header svg {
+  width: 20px;
+  color: #b3b3b3;
+  cursor: pointer;
+}
