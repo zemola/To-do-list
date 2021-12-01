@@ -1,14 +1,41 @@
-import _ from "lodash";
-import "./style.css";
+import './style.css';
 
-function component() {
-  const element = document.createElement("div");
+const listContainer = document.querySelector('[data-lists]');
+const data = [
+  {
+    id: 1,
+    description: 'Want to join meeting by 8 am ',
+    complete: false,
+  },
+  {
+    id: 2,
+    description: 'need to code with my patner',
+    complete: false,
+  },
+  {
+    id: 3,
+    description: ' Want to read about React',
+    complete: false,
+  },
+  {
+    id: 4,
+    description: 'Standup meeting with my team by 6pm',
+    complete: false,
+  },
+];
 
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(["Hello", "webpack"], " ");
-  element.classList.add("hello");
+const mainHandler = () => {
+  data.forEach((list) => {
+    const listElement = document.createElement('li');
+    listElement.classList.add('todo');
+    listElement.innerHTML = `
+      <div class='description'>
+     <input type= 'checkbox'> <p>${list.description}</p>
+      </div>
+      <div><i class='fa fa-ellipsis-v'></i></div>
+         `;
+    listContainer.appendChild(listElement);
+  });
+};
 
-  return element;
-}
-
-document.body.appendChild(component());
+mainHandler();

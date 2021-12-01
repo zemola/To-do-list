@@ -1,3 +1,130 @@
-.hello {
-  color: red;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f6f6f6;
+  font-family: sans-serif;
+  text-align: center;
+  font-weight: 300;
+  font-size: 14px;
+  color: #1d1d1d;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.general-wrapper {
+  width: 500px;
+  max-height: 660px;
+  overflow-y: scroll;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+}
+
+.general-wrapper::-webkit-scrollbar {
+  width: 0;
+}
+
+.general-wrapper::-webkit-scrollbar-thumb {
+  background-color: #d3d3d3;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 1px solid #d8d8d8;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+}
+
+.title h1 {
+  font-size: 16px;
+}
+
+.add-list {
+  width: 100%;
+  padding: 15px;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+form input {
+  width: 90%;
+  border: none;
+  font-style: italic;
+  font-weight: lighter;
+  padding-left: 15px;
+}
+
+form input:focus {
+  outline: none;
+}
+
+form button[type="submit"] {
+  border: none;
+  background: none;
+}
+
+span,
+i {
+  color: #b3b3b3;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #d8d8d8;
+  padding: 15px 0;
+  padding: 15px;
+}
+
+.description {
+  display: flex;
+}
+
+.description p {
+  color: #000;
+  margin-left: 10px;
+}
+
+.clear-all {
+  width: 100%;
+  padding: 15px;
+  background-color: #f6f6f6;
+  position: sticky;
+  bottom: 0;
+}
+
+.clear-all button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #b3b3b3;
+}
+
+.clear-all button:hover {
+  color: #525151;
+  text-decoration: underline;
 }
