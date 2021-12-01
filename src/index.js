@@ -1,5 +1,8 @@
 import './style.css';
 
+const todos = JSON.parse(localStorage.getItem(localStorageTodos)) || [];
+const selectedTodoId = localStorage.getItem(localStorageSelectedTodo);
+
 const listContainer = document.querySelector('[data-lists]');
 const data = [
   {
