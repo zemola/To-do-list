@@ -100,8 +100,13 @@ i {
   padding: 15px;
 }
 
+.description {
+  display: flex;
+}
+
 .description p {
   color: #000;
+  margin-left: 10px;
 }
 
 .clear-all {

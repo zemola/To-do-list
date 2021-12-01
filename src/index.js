@@ -29,8 +29,8 @@ const mainHandler = () => {
     const listElement = document.createElement('li');
     listElement.classList.add('todo');
     listElement.innerHTML = `
-      <div class 'description'>
-     <input type= 'checkbox'> <label>${list.description}</label>
+      <div class='description'>
+     <input type= 'checkbox'> <p>${list.description}</p>
       </div>
       <div><i class='fa fa-ellipsis-v'></i></div>
          `;
