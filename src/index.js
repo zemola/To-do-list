@@ -1,9 +1,10 @@
-import "./style.css"; 
+import "./style.css";
+
 const listContainer = document.querySelector("[data-lists]");
-let data = [
+const data = [
   {
     id: 1,
-    description: "Want to join meeting by 8 am",
+    description: "Want to join meeting by 8 am ",
     complete: false,
   },
   {
@@ -24,20 +25,16 @@ let data = [
 ];
 
 const mainHandler = () => {
- data.forEach((list) => {
-    const listElement = document.createElement('li');
-    listElement.classList.add('todo');
+  data.forEach((list) => {
+    const listElement = document.createElement("li");
+    listElement.classList.add("todo");
     listElement.innerHTML = `
-      <div class= "toggle">
-        <span class="material-icons-outlined">check_box_outline_blank</span> 
-      <div class = "check">
-        <span class="material-icons-outlined">check</span>
-        </div>
-        </div>
-        <div class "description">
+    <div class 'check'><input type= 'checkbox'></div>
+    <div class 'description'>
           <p>${list.description}</p>
         </div>
-        <span class="material-icons-outlined">more_vert</span> `;
+        <div><i class='fa fa-ellipsis-v'></i></div>
+         `;
     listContainer.appendChild(listElement);
   });
 };

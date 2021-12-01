@@ -1,18 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #f6f6f6;
-    font-family: sans-serif;
-    text-align: center;
-    font-weight: 300;
-    font-size: 14px;
-    color: #1d1d1d;
+  background-color: #f6f6f6;
+  font-family: sans-serif;
+  text-align: center;
+  font-weight: 300;
+  font-size: 14px;
+  color: #1d1d1d;
 }
 
 main {
@@ -45,12 +45,10 @@ main {
 .title {
   display: flex;
   justify-content: space-between;
-  margin: 15px;
   padding: 16px;
   border-bottom: 1px solid #d8d8d8;
   position: sticky;
   top: 0;
-  z-index: 999;
   background-color: #fff;
 }
 
@@ -58,13 +56,7 @@ main {
   font-size: 16px;
 }
 
-.title svg {
-  width: 20px;
-  color: #b3b3b3;
-  cursor: pointer;
-}
-
-.add-todo-form {
+.add-list {
   width: 100%;
   padding: 15px;
   border-bottom: 1px solid #d8d8d8;
@@ -77,62 +69,44 @@ form {
 }
 
 form input {
-  width: 95%;
+  width: 90%;
   border: none;
   font-style: italic;
   font-weight: lighter;
-  padding-left: 5px;
+  padding-left: 15px;
 }
 
 form input:focus {
   outline: none;
 }
 
-form button[type='submit'] {
+form button[type="submit"] {
   border: none;
   background: none;
 }
 
-.material-icons,
-.enter-arrow {
+span,
+i {
   color: #b3b3b3;
   cursor: pointer;
-}
-
-.todo-list {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.toggle {
-  display: flex;
-  justify-content: center;
+  margin-right: 5px;
 }
 
 .todo {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   border-bottom: 1px solid #d8d8d8;
   padding: 15px 0;
   padding: 15px;
 }
-
-.check-div {
-  display: none;
-}
-
-span.check {
-  width: 20px;
-  color: #2a9d8f;
-  display: none;
+.check {
+  width: 10%;
+  padding: 15px;
 }
 
 .description {
-  width: 90%;
-  margin-left: 15px;
-  text-align: left;
+  width: 500px;
+  text-align: start;
 }
 
 .description p {
@@ -157,8 +131,4 @@ span.check {
 .clear-all button:hover {
   color: #525151;
   text-decoration: underline;
-}
-
-.todo span.move-icon {
-  cursor: all-scroll;
 }

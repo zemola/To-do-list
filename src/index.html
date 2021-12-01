@@ -5,25 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Icons"
-      rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>To-do list</title>
   </head>
   <body>
     <main>
       <div class="general-wrapper">
-      <header class="title">
+      <div class="title">
         <h1 id="title-id">To-Do list</h1>
-      </header>
+<span class="material-icons">
+autorenew
+</span>
+      </div>
       <div class="add-list">
         <form>
           <input type="text" placeholder="Add to your list..." id="new-todo" />
           <button
             type="submit"
-            title="Click this or press enter to submit new todo"
-          >
-            <span class="material-icons-outlined">subdirectory_arrow_left</span>
+            title="Click this or press enter to submit new todo">
+            <span><i class="fa fa-arrow-left" aria-hidden="true"></i></span>
           </button>
         </form>
       </div>
