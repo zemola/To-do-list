@@ -42,7 +42,7 @@ main {
   background-color: #d3d3d3;
 }
 
-.title-header {
+.title {
   display: flex;
   justify-content: space-between;
   margin: 15px;
@@ -54,12 +54,111 @@ main {
   background-color: #fff;
 }
 
-.title-header h1 {
+.title h1 {
   font-size: 16px;
 }
 
-.title-header svg {
+.title svg {
   width: 20px;
   color: #b3b3b3;
   cursor: pointer;
+}
+
+.add-todo-form {
+  width: 100%;
+  padding: 15px;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+form input {
+  width: 95%;
+  border: none;
+  font-style: italic;
+  font-weight: lighter;
+  padding-left: 5px;
+}
+
+form input:focus {
+  outline: none;
+}
+
+form button[type='submit'] {
+  border: none;
+  background: none;
+}
+
+.material-icons,
+.enter-arrow {
+  color: #b3b3b3;
+  cursor: pointer;
+}
+
+.todo-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.toggle {
+  display: flex;
+  justify-content: center;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #d8d8d8;
+  padding: 15px 0;
+  padding: 15px;
+}
+
+.check-div {
+  display: none;
+}
+
+span.check {
+  width: 20px;
+  color: #2a9d8f;
+  display: none;
+}
+
+.description {
+  width: 90%;
+  margin-left: 15px;
+  text-align: left;
+}
+
+.description p {
+  color: #000;
+}
+
+.clear-all {
+  width: 100%;
+  padding: 15px;
+  background-color: #f6f6f6;
+  position: sticky;
+  bottom: 0;
+}
+
+.clear-all button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #b3b3b3;
+}
+
+.clear-all button:hover {
+  color: #525151;
+  text-decoration: underline;
+}
+
+.todo span.move-icon {
+  cursor: all-scroll;
 }
