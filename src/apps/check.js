@@ -13,7 +13,7 @@ const checkAndUnchecklist = (todos, localStorageTodos) => {
         e.target.parentNode.nextSibling.nextElementSibling
           .querySelector('.todo-desc')
           .classList.add('linethrough');
-          foundList.completed = true;
+        foundList.completed = true;
       }
       const filteredTodo = todos.filter((todo) => todo.id !== todoId);
       filteredTodo.splice(foundList.index - 1, 0, foundList);

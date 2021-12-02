@@ -65,8 +65,8 @@ newListForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const todo = newListInput.value.trim();
   if (todo === null || todo === '') return;
-  const list = createList(todo); 
-  newListInput.value = null; 
+  const list = createList(todo);
+  newListInput.value = null;
   todos.push(list);
   handleSaveAndRender();
 });
