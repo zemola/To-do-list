@@ -135,3 +135,7 @@ i {
   color: #525151;
   text-decoration: underline;
 }
+
+.linethrough {
+  text-decoration: line-through;
+}
