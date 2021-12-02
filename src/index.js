@@ -24,9 +24,7 @@ const save = () => {
 const mainHandler = () => {
   clearListContainer(listHolder);
 
-  // Looping through the list
   todos.forEach((list) => {
-    // Creating li element to be append to the ListHolder
     const listElement = document.createElement('li');
     listElement.classList.add('list');
     listElement.setAttribute('data-todo-item', list.id);
