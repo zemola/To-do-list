@@ -1,6 +1,7 @@
 // import e from 'express';
 import './style.css';
 import clearListContainer from './apps/clear-all.js';
+import checkAndUnchecklist from './apps/check.js';
 
 const listHolder = document.querySelector('.to-do-list');
 const newListForm = document.querySelector('.add-list-form');
