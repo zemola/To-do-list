@@ -92,21 +92,33 @@ i {
   margin-right: 5px;
 }
 
-.todo {
+.todo-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.list {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid #d8d8d8;
   padding: 15px 0;
   padding: 15px;
 }
 
 .description {
-  display: flex;
+  width: 90%;
+  margin-left: 15px;
+  text-align: left;
 }
 
 .description p {
   color: #000;
-  margin-left: 10px;
+}
+
+#threedot {
+  cursor: all-scroll;
 }
 
 .clear-all {
@@ -127,4 +139,8 @@ i {
 .clear-all button:hover {
   color: #525151;
   text-decoration: underline;
+}
+
+.linethrough {
+  text-decoration: line-through;
 }

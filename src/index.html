@@ -12,16 +12,17 @@
   </head>
   <body>
     <main>
+      <!-- Todo list header -->
       <div class="general-wrapper">
       <div class="title">
         <h1 id="title-id">To-Do list</h1>
-<span class="material-icons">
-autorenew
-</span>
+        <span class="material-icons">autorenew</span>
       </div>
+
+      <!-- Todo list input form -->
       <div class="add-list">
-        <form>
-          <input type="text" placeholder="Add to your list..." id="new-todo" />
+        <form class= "add-list-form">
+          <input class= "add-list-input" type="text" placeholder="Add to your list..." id="new-todo" />
           <button
             type="submit"
             title="Click this or press enter to submit new todo">
@@ -29,7 +30,11 @@ autorenew
           </button>
         </form>
       </div>
+      
+      <!-- curent todo list -->
       <ul class="to-do-list" data-lists></ul>
+      
+      <!-- Clear all todo list -->
       <div class="clear-all">
         <button type="button">Clear all completed</button>
       </div>
