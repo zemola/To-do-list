@@ -3,6 +3,7 @@ import './style.css';
 import clearListContainer from './apps/clear-all.js';
 import checkAndUnchecklist from './apps/check.js';
 
+
 const listHolder = document.querySelector('.to-do-list');
 const newListForm = document.querySelector('.add-list-form');
 const newListInput = document.querySelector('.add-list-input');
