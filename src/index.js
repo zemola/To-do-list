@@ -38,7 +38,7 @@ const mainHandler = () => {
       <div class="description">
         <p class="todo-desc linethrough">${list.description}</p>
       </div>
-      <span class="material-icons move-icon">more_vert</span>
+      <span class="material-icons move-icon" id="threedot">more_vert</span>
     `;
     } else {
       listElement.innerHTML = `
@@ -48,7 +48,7 @@ const mainHandler = () => {
       <div class="description">
         <p class="todo-desc">${list.description}</p>
       </div>
-      <span class="material-icons move-icon">more_vert</span>
+      <span class="material-icons move-icon" id="threedot">more_vert</span>
     `;
     }
     listHolder.appendChild(listElement);
