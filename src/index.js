@@ -63,7 +63,6 @@ const mainHandler = () => {
 
   editTodo(localStorageTodos);
 
-    // Delete a single todo
   document.querySelectorAll('.delete-todo').forEach((list) => {
     list.addEventListener('click', (e) => {
       const todos = JSON.parse(localStorage.getItem(localStorageTodos));
