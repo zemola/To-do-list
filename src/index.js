@@ -2,11 +2,14 @@
 import './style.css';
 import clearListContainer from './apps/clear-all.js';
 import checkAndUnchecklist from './apps/check.js';
+import editTodo from './apps/edit.js';
+import clearAllCompletedTodos from './apps/clear-all-todo.js';
 
 
 const listHolder = document.querySelector('.to-do-list');
 const newListForm = document.querySelector('.add-list-form');
 const newListInput = document.querySelector('.add-list-input');
+const clearButton = document.querySelector('.clear-all-button');
 
 const localStorageTodos = 'todo.lists';
 
@@ -37,7 +40,7 @@ const mainHandler = () => {
         <input type="checkbox" checked class="check-box" />
       </div>
       <div class="description">
-        <p class="todo-desc linethrough">${list.description}</p>
+        <p class="todo-desc linethrough">${list.description}" data-edited-todo id="${list.id}" </p>
       </div>
       <span class="material-icons move-icon" id="threedot">more_vert</span>
     `;
@@ -47,7 +50,7 @@ const mainHandler = () => {
         <input type="checkbox" class="check-box" />
       </div>
       <div class="description">
-        <p class="todo-desc">${list.description}</p>
+        <p class="todo-desc">${list.description}" data-edited-todo id="${list.id}"</p>
       </div>
       <span class="material-icons move-icon" id="threedot">more_vert</span>
     `;
@@ -55,6 +58,8 @@ const mainHandler = () => {
     listHolder.appendChild(listElement);
   });
   checkAndUnchecklist(todos, localStorageTodos);
+
+  editTodo(localStorageTodos); 
 };
 
 const handleSaveAndRender = () => {
@@ -70,6 +75,13 @@ newListForm.addEventListener('submit', (e) => {
   newListInput.value = null;
   todos.push(list);
   handleSaveAndRender();
+});
+
+
+// Clear all completed todos upon click
+clearButton.addEventListener('click', () => {
+  clearAllCompletedTodos(localStorageTodos);
+  mainHandler();
 });
 
 mainHandler();
