@@ -62,6 +62,14 @@ main {
   border-bottom: 1px solid #d8d8d8;
 }
 
+form input {
+  width: 90%;
+  border: none;
+  font-style: italic;
+  font-weight: lighter;
+  padding-left: 15px;
+}
+
 .description input {
   color: #000;
   border: none;
@@ -73,14 +81,6 @@ form {
   width: 100%;
   display: flex;
   justify-content: space-between;
-}
-
-form input {
-  width: 90%;
-  border: none;
-  font-style: italic;
-  font-weight: lighter;
-  padding-left: 15px;
 }
 
 form input:focus {
