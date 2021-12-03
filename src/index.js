@@ -65,7 +65,7 @@ const mainHandler = () => {
 
   document.querySelectorAll('.delete-todo').forEach((list) => {
     list.addEventListener('click', (e) => {
-      todos = JSON.parse(localStorage.getItem(localStorageTodos)); 
+      todos = JSON.parse(localStorage.getItem(localStorageTodos));
       const filtered = todos.filter((list) => list.id !== e.target.parentNode.dataset.id);
       localStorage.setItem(localStorageTodos, JSON.stringify(filtered));
       todos = filtered;
