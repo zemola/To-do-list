@@ -40,7 +40,7 @@ const mainHandler = () => {
         <input type="checkbox" checked class="check-box" />
       </div>
       <div class="description">
-        <p class="todo-desc linethrough">${list.description}" data-edited-todo id="${list.id}" </p>
+         <input class="todo-desc" value="${list.description}" data-edited-todo id="${list.id}"/>
       </div>
       <span class="material-icons move-icon" id="threedot">more_vert</span>
     `;
@@ -50,7 +50,7 @@ const mainHandler = () => {
         <input type="checkbox" class="check-box" />
       </div>
       <div class="description">
-        <p class="todo-desc">${list.description}" data-edited-todo id="${list.id}"</p>
+         <input class="todo-desc" value="${list.description}" data-edited-todo id="${list.id}"/>
       </div>
       <span class="material-icons move-icon" id="threedot">more_vert</span>
     `;
@@ -81,7 +81,7 @@ newListForm.addEventListener('submit', (e) => {
 // Clear all completed todos upon click
 clearButton.addEventListener('click', () => {
   clearAllCompletedTodos(localStorageTodos);
-  mainHandler();
+  location.reload();
 });
 
 mainHandler();
