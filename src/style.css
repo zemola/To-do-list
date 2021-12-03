@@ -110,14 +110,14 @@ i {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #d8d8d8;
-  padding: 15px 0;
-  padding: 15px;
+  padding: 0 15px;
 }
 
 .description {
   width: 90%;
   margin-left: 15px;
   text-align: left;
+  display: flex;
 }
 
 .description input:focus {
@@ -154,4 +154,16 @@ i {
 
 .linethrough {
   text-decoration: line-through;
+}
+
+.delete-todo {
+  background: none;
+  border: none;
+  color: #525151;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.delete-todo:hover {
+  color: #df564a;
 }

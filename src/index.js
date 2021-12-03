@@ -49,7 +49,10 @@ const mainHandler = () => {
         <input type="checkbox" class="check-box" />
       </div>
       <div class="description">
-         <input class="todo-desc" value="${list.description}" data-edited-todo id="${list.id}"/>
+        <input class="todo-desc" value="${list.description}" data-edited-todo id="${list.id}"/>
+        <button type="button" class="delete-todo" data-id="${list.id}"/>
+          <span class="material-icons">delete</span>
+        </button>
       </div>
       <span class="material-icons move-icon" id="threedot">more_vert</span>
     `;
@@ -59,6 +62,16 @@ const mainHandler = () => {
   checkAndUnchecklist(todos, localStorageTodos);
 
   editTodo(localStorageTodos);
+
+    // Delete a single todo
+  document.querySelectorAll('.delete-todo').forEach((list) => {
+    list.addEventListener('click', (e) => {
+      const todos = JSON.parse(localStorage.getItem(localStorageTodos));
+      const filtered = todos.filter((list) => list.id !== e.target.parentNode.dataset.id);
+      localStorage.setItem(localStorageTodos, JSON.stringify(filtered));
+      e.target.closest('ul>li').remove(todos);
+    });
+  });
 };
 
 const handleSaveAndRender = () => {
