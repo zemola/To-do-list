@@ -5,7 +5,6 @@ import checkAndUnchecklist from './apps/check.js';
 import editTodo from './apps/edit.js';
 import clearAllCompletedTodos from './apps/clear-all-todo.js';
 
-
 const listHolder = document.querySelector('.to-do-list');
 const newListForm = document.querySelector('.add-list-form');
 const newListInput = document.querySelector('.add-list-input');
@@ -59,7 +58,7 @@ const mainHandler = () => {
   });
   checkAndUnchecklist(todos, localStorageTodos);
 
-  editTodo(localStorageTodos); 
+  editTodo(localStorageTodos);
 };
 
 const handleSaveAndRender = () => {
@@ -77,11 +76,9 @@ newListForm.addEventListener('submit', (e) => {
   handleSaveAndRender();
 });
 
-
 // Clear all completed todos upon click
 clearButton.addEventListener('click', () => {
   clearAllCompletedTodos(localStorageTodos);
-  location.reload();
 });
 
 mainHandler();

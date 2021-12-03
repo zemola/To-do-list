@@ -113,19 +113,19 @@ i {
   text-align: left;
 }
 
-.description input {
-  color: #000;
-  border: none;
-  padding: 18px;
-  width: 100%;
-}
-
 .description input:focus {
   outline: none;
   width: 100%;
   height: 100%;
   display: block;
-  background-color: #c0e6fb
+  background-color: #c0e6fb;
+}
+
+.description input {
+  color: #000;
+  border: none;
+  padding: 18px;
+  width: 100%;
 }
 
 #threedot {
