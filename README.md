@@ -15,7 +15,7 @@ To-do list: is a tool that helps to organize your day. It simply lists the thing
 
 ## Live Demo
 
-[Live Demo Link](https://zemola.github.io/To-do-list/dist)
+<a href= "https://zemola.github.io/To-do-list/dist/">To-do list App</a>
 
 
 
